@@ -1,3 +1,5 @@
+Threat Scanner is a powerful browser extension that helps you stay secure while browsing the web. It scans the webpage you’re visiting to identify its associated IP addresses and checks them against the VirusTotal platform. The extension provides instant insights about the safety and reputation of these IPs, enabling you to detect potential threats and make informed decisions.
+
 This firefox extension has not been tested in other browsers. There is still a lot of work and development needing to be done with adjusting the UI and pulling in more results to be displayed by the VT API JSON data. 
 
 1. To import and have this working, ensure you put in your virustotal api keys into the background.js file.
