@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "Threat Scanner",
+    "version": "1.0",
+  
+    "description": "Performs page scans against specified domains and IP addresses, utilising VirusTotal to retrieve and assess threat level scores.",
+    "permissions": ["activeTab", "webRequest", "<all_urls>"],
+  
+    "icons": {
+      "48": "icons/border-48.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["Javascript/background.js"]
+      }
+    ],
+    "browser_action": {
+        "default_popup": "html/popup.html",
+        "default_icon": {
+    "48": "icons/border-48.png"
+  },
+  "default_title": "Threat Scanner"
+}
+}

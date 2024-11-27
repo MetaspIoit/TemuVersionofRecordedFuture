@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 320px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 1.4em;
+            margin: 0 0 20px;
+            text-align: center;
+        }
+
+        /* IP List Container */
+        #ip-list {
+            max-height: 350px;
+            overflow-y: auto;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Empty state message */
+        .no-ips {
+            text-align: center;
+            color: #aaa;
+            font-style: italic;
+        }
+
+        /* Individual IP Item */
+        .ip-item {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            padding: 12px 18px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+
+        .ip-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header of each IP Item */
+        .ip-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        .status-dot {
+            font-size: 18px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .status-dot.safe {
+            background-color: #4CAF50; /* Green */
+        }
+
+        .status-dot.unsafe {
+            background-color: #F44336; /* Red */
+        }
+
+        /* Dropdown Arrow for IP Details */
+        .dropdown-arrow {
+            transition: transform 0.3s ease;
+        }
+
+        .dropdown-arrow.open {
+            transform: rotate(180deg);
+        }
+
+        /* IP Details Section */
+        .ip-details {
+            margin-top: 10px;
+            padding: 15px;
+            background-color: #f2f2f2;
+            border-radius: 6px;
+            display: none;
+        }
+
+        .ip-details.show {
+            display: block;
+        }
+
+        /* Detail Line in IP Details */
+        .detail-line {
+            margin: 8px 0;
+            color: #555;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: #333;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Scanned IP Addresses</h2>
+    <div id="ip-list">
+        <!-- IPs will be inserted here -->
+        <div class="no-ips">No IP addresses to display.</div>
+    </div>
+
+    <script src="../Javascript/popup.js"></script>
+</body>
+</html>
